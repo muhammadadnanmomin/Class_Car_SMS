@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>sign-Up</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Remixicons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Footer Icons -->
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/x-icon" href="Assets/favicon.png">
+
+
+  <style>
+    .form-head {
+      text-align: center;
+      margin-top: 120px;
+      font-weight: 500px;
+      font-size: 25px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center form elements horizontally */
+      margin-top: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      position: relative;
+      /* Position relative for absolute positioning of icons */
+      width: 100%;
+    }
+
+    input::placeholder {
+      font-weight: 500;
+      color: #000;
+    }
+
+    input[type="tel"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+
+    input[type="submit"] {
+      margin-top: 10px;
+      padding: 10px 20px;
+      color: #000;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid black;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      /* Make button full width */
+      max-width: 200px;
+      /* Limit button width */
+    }
+
+    input[type="submit"]:hover {
+      background-color: #000;
+      color: rgb(255, 255, 255);
+      box-shadow: 0 5px 9px rgba(0, 0, 117, 0.1);
+    }
+
+    .field-icon {
+      font-size: 16px;
+      color: #000;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .forgot-pass a {
+      text-decoration: underline;
+      color: #000;
+    }
+
+    .or {
+      text-align: center;
+      margin-top: 30px;
+      font-weight: 500;
+    }
+
+    .sign-up-section {
+      display: grid;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .sign-up-section a {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .apple-button {
+      background-color: black;
+      color: white;
+    }
+
+    .google-button {
+      background-color: #4285F4;
+      color: white;
+    }
+
+    .facebook-button {
+      background-color: #3B5998;
+      color: white;
+    }
+
+    a img {
+      background: #fff;
+      width: 30px;
+      height: auto;
+    }
+
+    .ca {
+      text-align: center;
+      text-decoration: underline;
+      margin-top: 40px;
+    }
+
+    .ca a {
+      color: #000;
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+      .sign-up-section {
+        justify-content: center;
+      }
+
+      button {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .form-group input {
+        font-size: 14px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        /* Full width on small screens */
+        max-width: none;
+        /* Remove max-width on small screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index.html" class="nav__logo">
+          ClassCar
+        </a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+
+      <!-- NAV MENU -->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!-- <li>
+                  <a href="#" class="nav__link">Home</a>
+              </li> -->
+
+          <!-- DROPDOWN 1 -->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              BRANDS <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <div class="dropdown__container">
+
+              <section id="nav-brand-section">
+                <div class="nav-brand-container">
+
+                  <div class="nav-brand-item"><img src="Assets/toyota-l.svg" alt="toyota">
+                    <p>Toyota</p>
+                  </div>
+                  <div class="nav-brand-item"><img src="Assets/jeep-l.svg" alt="Volkswagen">
+                    <p>Jeep</p>
+                  </div>
+                  <div class="nav-brand-item"><img src="Assets/honda-l.svg" alt="Honda">
+                    <p>Honda</p>
+                  </div>
+                  <div class="nav-brand-item"><img src="Assets/hyundai-l.svg" alt="Hyundai">
+                    <p>Hyundai</p>
+                  </div>
+                  <div class="nav-brand-item"><img src="Assets/skoda-l.svg" alt="Skoda">
+                    <p>Skoda</p>
+                  </div>
+                  <div class="nav-brand-item"><img src="Assets/ford-l.svg" alt="Ford">
+                    <p>Ford</p>
+                  </div>
+                  <div class="nav-brand-item"><img src="Assets/tata-l.svg" alt="Tata">
+                    <p>Tata</p>
+                  </div>
+                  <div class="nav-brand-item hidden-btn"><img src="Assets/mg-l.svg" alt="MG">
+                    <p>MG</p>
+                  </div>
+                  <div class="nav-brand-item hidden-btn"><img src="Assets/mahindra-l.svg" alt="Mahindra">
+                    <p>Mahindra</p>
+                  </div>
+                </div>
+                <button id="nav-view-all-brands">View All Brands</button>
+              </section>
+
+            </div>
+
+          </li>
+
+          <!--  DROPDOWN 2 -->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              SHOP <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <!-- <div class="dropdown__icon">
+                                  <i class="ri-code-line"></i>
+                              </div> -->
+
+                  <span class="dropdown__title">Own a Car</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Book a test drive</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Car configurator</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Price List</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="dropdown__group">
+                  <!-- <div class="dropdown__icon">
+                                  <i class="ri-pen-nib-line"></i>
+                              </div> -->
+
+                  <span class="dropdown__title">Extras</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Car Accessories</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Brochures</a>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="dropdown__group">
+                  <!-- <div class="dropdown__icon">
+                                  <i class="ri-apps-2-line"></i>
+                              </div> -->
+
+                  <span class="dropdown__title">Others</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Approved used cars</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Recent Blogs</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">About Us</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+
+          <!-- DROPDOWN 3 -->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              OWNERS <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <!-- <div class="dropdown__icon">
+                                  <i class="ri-community-line"></i>
+                              </div> -->
+
+                  <span class="dropdown__title">Service</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Book a Service</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Loyalty Program</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Warranty</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Genuine Parts Extended Warranty</a>
+                    </li>
+                  </ul>
+
+
+                </div>
+
+                <div class="dropdown__group">
+                  <!-- <div class="dropdown__icon">
+                                  <i class="ri-shield-line"></i>
+                              </div> -->
+
+                  <span class="dropdown__title">Support</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Support System</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="dropdown__group">
+                  <span class="dropdown__title">ClassCar Account</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Account Login</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">ClassCar App</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="#" class="nav__link">Sign In</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sign Up Form -->
+  <div class="form-head">
+    SIGN IN
+  </div>
+  <form id="myForm">
+
+    <div class="form-group">
+      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="EMAIL ADDRESS OR PHONE NUMBER" required>
+    </div>
+    <div class="form-group">
+      <input type="password" id="password" name="password" placeholder="PASSWORD">
+      <span class="field-icon" onclick="togglePasswordVisibility('password')">
+        <i class="fas fa-eye"></i>
+      </span>
+    </div>
+    <div class="forgot-pass">
+      <a href="#">Forgot Password?</a>
+    </div>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <div class="or">
+    OR
+  </div>
+
+  <section class="sign-up-section">
+    <a class="apple-button">
+      <img src="Assets/apple-i.png" alt="Apple logo">
+      Sign In with Apple
+    </a>
+    <a class="google-button">
+      <img src="Assets/google-i.png" alt="Google logo">
+      Sign In with Google
+    </a>
+    <a class="facebook-button">
+      <img src="Assets/meta-i.png" alt="Facebook logo">
+      Sign In with Meta
+    </a>
+  </section>
+
+  <div class="ca">
+    <a href="sign-up.html">Create Account</a>
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container-f">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Help & Support</h4>
+          <ul>
+            <li><a href="#"> Book a service</a></li>
+            <li><a href="#">Support & manuals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact us</h4>
+          <ul>
+            <li><a href="#">Contact ClassCar</a></li>
+            <li><a href="#">Book a test driv</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>CalssCar App</h4>
+          <ul>
+            <li><a href="#">App Store</a></li>
+            <li><a href="#">Google play</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/theclasscar/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function togglePasswordVisibility(id) {
+      const passwordField = document.getElementById(id);
+      const icon = passwordField.nextElementSibling.querySelector('i');
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        passwordField.type = "password";
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
